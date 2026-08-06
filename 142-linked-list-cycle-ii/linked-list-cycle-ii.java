@@ -18,11 +18,11 @@ public class Solution {
             fast=fast.next.next;
             slow=slow.next;
             if(fast==slow){
-                while(head!=slow){
+                while(head!=fast){    //can also take head!=slow
                     head=head.next;
-                    slow=slow.next;
+                    fast=fast.next;  // slow=slow.next;
                 }
-                return slow;
+                return fast;  //return slow
             }
         }
         return null;
